@@ -3,162 +3,142 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>FitMax — Entrena al máximo</title>
-<meta name="description" content="FitMax: entrenamiento funcional, fuerza y nutrición con coaches certificados. Tu primera semana es gratis.">
+<title>Justo Triviño — Diseño</title>
+<meta name="description" content="Justo Triviño, diseñador. Identidad de marca, diseño web y contenido visual para marcas que quieren destacar.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#0b0b0c; --bg-2:#141416; --card:#18181b; --line:#2a2a2e;
-    --text:#f4f4f5; --muted:#a1a1aa; --accent:#c6ff00; --accent-ink:#0b0b0c; --hot:#ff4d2e;
-    --radius:18px; --max:1180px;
+    --bg:#f3efe7; --paper:#ebe5d9; --ink:#141210; --muted:#6b645b; --line:#d6cebf;
+    --accent:#e8522b; --max:1240px;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
-  body{background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif;line-height:1.55;overflow-x:hidden}
+  body{background:var(--bg);color:var(--ink);font-family:"Inter Tight",system-ui,sans-serif;line-height:1.55;overflow-x:hidden}
   a{color:inherit;text-decoration:none}
-  .wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
-  .display{font-family:Anton,Impact,sans-serif;text-transform:uppercase;letter-spacing:.01em;line-height:.92}
-  .eyebrow{display:inline-flex;gap:8px;align-items:center;font-size:.78rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--accent)}
-  .eyebrow::before{content:"";width:22px;height:2px;background:var(--accent)}
-  .btn{display:inline-flex;align-items:center;gap:10px;padding:15px 26px;border-radius:999px;font-weight:800;font-size:.95rem;transition:transform .2s,box-shadow .2s,background .2s}
-  .btn-primary{background:var(--accent);color:var(--accent-ink)}
-  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 30px -10px var(--accent)}
-  .btn-ghost{border:1.5px solid var(--line)}
-  .btn-ghost:hover{border-color:var(--text)}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+  .serif{font-family:Fraunces,Georgia,serif;font-weight:400;letter-spacing:-.02em}
+  .label{font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
 
-  /* NAV */
-  header{position:sticky;top:0;z-index:50;background:rgba(11,11,12,.78);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-  nav{display:flex;align-items:center;justify-content:space-between;height:68px}
-  .logo{font-family:Anton,sans-serif;font-size:1.6rem;letter-spacing:.04em}
-  .logo span{color:var(--accent)}
-  .links{display:flex;gap:30px;font-size:.92rem;color:var(--muted)}
-  .links a:hover{color:var(--text)}
-  nav .btn{padding:10px 18px;font-size:.85rem}
+  header{position:sticky;top:0;z-index:20;background:rgba(243,239,231,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  nav{display:flex;justify-content:space-between;align-items:center;height:64px}
+  .mark{display:flex;align-items:center;gap:10px;font-weight:600}
+  .mark b{width:34px;height:34px;border-radius:50%;background:var(--ink);color:var(--bg);display:grid;place-items:center;font-family:Fraunces,serif;font-size:.95rem;font-weight:600}
+  .links{display:flex;gap:28px;font-size:.92rem}
+  .links a{position:relative}
+  .links a::after{content:"";position:absolute;left:0;bottom:-3px;height:1px;width:0;background:var(--ink);transition:width .25s}
+  .links a:hover::after{width:100%}
+  .pill{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:999px;background:var(--ink);color:var(--bg);font-size:.88rem;font-weight:500;transition:background .2s}
+  .pill:hover{background:var(--accent)}
+  .dot{width:8px;height:8px;border-radius:50%;background:#3ccf6e;box-shadow:0 0 0 4px rgba(60,207,110,.2)}
 
-  /* HERO */
-  .hero{position:relative;padding:80px 0 60px;overflow:hidden}
-  .hero::before{content:"";position:absolute;inset:-20% -10% auto auto;width:720px;height:720px;background:radial-gradient(circle,rgba(198,255,0,.18),transparent 62%);pointer-events:none}
-  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
-  .hero h1{font-size:clamp(3.4rem,9vw,7.6rem);margin:18px 0 22px}
-  .hero h1 .stroke{color:transparent;-webkit-text-stroke:2px var(--text)}
-  .hero h1 .hl{color:var(--accent)}
-  .hero p.lead{font-size:1.12rem;color:var(--muted);max-width:520px;margin-bottom:32px}
-  .cta-row{display:flex;gap:14px;flex-wrap:wrap}
-  .proof{display:flex;align-items:center;gap:14px;margin-top:34px;color:var(--muted);font-size:.9rem}
-  .avatars{display:flex}
-  .avatars i{width:36px;height:36px;border-radius:50%;border:2px solid var(--bg);margin-left:-10px;display:block}
-  .avatars i:first-child{margin-left:0}
-  .proof b{color:var(--text)}
+  .hero{padding:90px 0 70px}
+  .hero .label{display:flex;align-items:center;gap:10px;margin-bottom:28px}
+  .hero h1{font-size:clamp(3.2rem,10.5vw,9.5rem);line-height:.9}
+  .hero h1 em{color:var(--accent)}
+  .hero-foot{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:56px;align-items:end;border-top:1px solid var(--line);padding-top:28px}
+  .hero-foot p{font-size:1.2rem;max-width:520px}
+  .hero-foot .side{display:flex;justify-content:flex-end;gap:40px}
+  .hero-foot .side div b{display:block;font-family:Fraunces,serif;font-size:2.4rem;font-weight:400;line-height:1}
+  .hero-foot .side div span{color:var(--muted);font-size:.85rem}
 
-  .hero-visual{position:relative;aspect-ratio:4/5;border-radius:28px;background:linear-gradient(160deg,#1d1d21,#0f0f11);border:1px solid var(--line);overflow:hidden}
-  .hero-visual svg{position:absolute;inset:0;width:100%;height:100%}
-  .float{position:absolute;background:rgba(20,20,22,.88);backdrop-filter:blur(8px);border:1px solid var(--line);border-radius:16px;padding:14px 16px;font-size:.82rem}
-  .float strong{display:block;font-size:1.35rem;font-family:Anton,sans-serif;letter-spacing:.02em}
-  .f1{top:22px;left:-14px}
-  .f1 strong{color:var(--accent)}
-  .f2{bottom:26px;right:-10px}
-  .bar{height:6px;width:140px;background:var(--line);border-radius:4px;margin-top:8px;overflow:hidden}
-  .bar i{display:block;height:100%;width:78%;background:var(--hot);border-radius:4px}
+  .ticker{background:var(--ink);color:var(--bg);overflow:hidden;padding:18px 0}
+  .ticker .t{display:flex;gap:42px;width:max-content;animation:sc 30s linear infinite}
+  .ticker span{font-family:Fraunces,serif;font-style:italic;font-size:1.6rem;white-space:nowrap}
+  .ticker span::after{content:"✺";font-style:normal;color:var(--accent);margin-left:42px}
+  @keyframes sc{to{transform:translateX(-50%)}}
 
-  /* MARQUEE */
-  .marquee{border-block:1px solid var(--line);background:var(--accent);color:var(--accent-ink);overflow:hidden;padding:16px 0}
-  .track{display:flex;gap:48px;width:max-content;animation:scroll 28s linear infinite}
-  .track span{font-family:Anton,sans-serif;font-size:1.6rem;text-transform:uppercase;white-space:nowrap}
-  .track span::after{content:"✦";margin-left:48px}
-  @keyframes scroll{to{transform:translateX(-50%)}}
+  section{padding:110px 0}
+  .sec-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:50px;flex-wrap:wrap}
+  .sec-head h2{font-size:clamp(2.4rem,6vw,4.6rem);line-height:1}
 
-  section{padding:96px 0}
-  .head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:48px;flex-wrap:wrap}
-  .head h2{font-size:clamp(2.4rem,5.5vw,4.2rem);margin-top:12px}
-  .head p{color:var(--muted);max-width:420px}
+  .works{display:grid;grid-template-columns:repeat(12,1fr);gap:22px}
+  .work{grid-column:span 6;display:block}
+  .work.wide{grid-column:span 7}.work.narrow{grid-column:span 5}
+  .thumb{position:relative;height:clamp(260px,30vw,420px);border-radius:14px;overflow:hidden;margin-bottom:16px}
+  .thumb > div{position:absolute;inset:0;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+  .work:hover .thumb > div{transform:scale(1.04)}
+  .meta{display:flex;justify-content:space-between;gap:12px;align-items:baseline}
+  .meta h3{font-family:Fraunces,serif;font-weight:400;font-size:1.55rem}
+  .meta span{color:var(--muted);font-size:.88rem}
 
-  /* STATS */
-  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
-  .stat{background:var(--bg);padding:34px 26px}
-  .stat b{font-family:Anton,sans-serif;font-size:3rem;display:block;line-height:1}
-  .stat b em{color:var(--accent);font-style:normal}
-  .stat span{color:var(--muted);font-size:.92rem}
+  /* project artworks (pure CSS) */
+  .a1{background:#1f3b2d;display:grid;place-items:center}
+  .a1 i{font-family:Fraunces,serif;font-style:italic;font-size:clamp(3rem,8vw,6rem);color:#e9d8a6}
+  .a2{background:var(--accent);display:grid;place-items:center}
+  .a2 i{width:46%;aspect-ratio:1;border-radius:50%;background:var(--bg);box-shadow:60px 0 0 -10px var(--ink)}
+  .a3{background:#d9d2ff;padding:9%}
+  .a3 .ui{height:100%;background:#fff;border-radius:10px;box-shadow:0 20px 40px -20px rgba(20,18,16,.4);padding:7%;display:grid;gap:8%;grid-template-rows:auto 1fr}
+  .a3 .ui b{height:10px;width:40%;background:var(--ink);border-radius:4px}
+  .a3 .ui div{display:grid;grid-template-columns:1fr 1fr;gap:8%}
+  .a3 .ui div i{border-radius:6px;background:#ebe7ff}
+  .a3 .ui div i:first-child{background:#6c5ce7}
+  .a4{background:var(--ink);display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:10%}
+  .a4 i{border-radius:8px;background:#2a2622}
+  .a4 i:nth-child(2){background:var(--accent)}.a4 i:nth-child(6){background:#e9d8a6}
 
-  /* PROGRAMS */
-  .programs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-  .prog{position:relative;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:30px;min-height:340px;display:flex;flex-direction:column;transition:transform .25s,border-color .25s}
-  .prog:hover{transform:translateY(-6px);border-color:var(--accent)}
-  .prog .num{font-family:Anton,sans-serif;color:var(--line);font-size:4.4rem;line-height:1;position:absolute;top:18px;right:22px}
-  .prog .ico{width:52px;height:52px;border-radius:14px;background:rgba(198,255,0,.1);display:grid;place-items:center;margin-bottom:auto}
-  .prog h3{font-family:Anton,sans-serif;text-transform:uppercase;font-size:1.9rem;margin:26px 0 10px;letter-spacing:.01em}
-  .prog p{color:var(--muted);font-size:.95rem}
-  .tags{display:flex;gap:8px;margin-top:18px;flex-wrap:wrap}
-  .tags span{font-size:.75rem;padding:5px 11px;border:1px solid var(--line);border-radius:999px;color:var(--muted)}
+  .services{background:var(--paper)}
+  .svc{border-top:1px solid var(--line)}
+  .svc details{border-bottom:1px solid var(--line)}
+  .svc summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:70px 1fr auto;gap:20px;align-items:center;padding:28px 0}
+  .svc summary::-webkit-details-marker{display:none}
+  .svc summary .n{color:var(--muted);font-size:.9rem}
+  .svc summary h3{font-family:Fraunces,serif;font-weight:400;font-size:clamp(1.6rem,3.6vw,2.6rem);transition:color .2s}
+  .svc summary:hover h3{color:var(--accent)}
+  .svc summary .plus{width:42px;height:42px;border-radius:50%;border:1px solid var(--ink);display:grid;place-items:center;font-size:1.3rem;transition:transform .3s,background .2s}
+  .svc details[open] .plus{transform:rotate(45deg);background:var(--ink);color:var(--bg)}
+  .svc .body{padding:0 0 30px 90px;max-width:760px;color:var(--muted)}
+  .svc .body ul{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;list-style:none}
+  .svc .body li{font-size:.82rem;border:1px solid var(--line);padding:5px 12px;border-radius:999px;color:var(--ink)}
 
-  /* METHOD */
-  .method{background:var(--bg-2)}
-  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;counter-reset:s}
-  .step{border-top:2px solid var(--line);padding-top:22px;counter-increment:s}
-  .step::before{content:"0" counter(s);font-family:Anton,sans-serif;color:var(--accent);font-size:1.1rem;letter-spacing:.1em}
-  .step h4{font-size:1.15rem;margin:10px 0 8px}
+  .about{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;align-items:center}
+  .portrait{aspect-ratio:4/5;border-radius:16px;background:linear-gradient(160deg,#d9cfbd,#b9ad97);position:relative;overflow:hidden}
+  .portrait::after{content:"JT";position:absolute;inset:auto 0 -6% 0;text-align:center;font-family:Fraunces,serif;font-size:13rem;line-height:1;color:rgba(20,18,16,.12)}
+  .portrait span{position:absolute;top:18px;left:18px;background:var(--bg);font-size:.78rem;padding:6px 12px;border-radius:999px}
+  .about h2{font-size:clamp(2rem,4.4vw,3.4rem);line-height:1.08;margin:16px 0 24px}
+  .about h2 em{color:var(--accent)}
+  .about p{color:var(--muted);font-size:1.06rem;margin-bottom:16px;max-width:600px}
+  .tools{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
+  .tools span{font-size:.85rem;padding:8px 14px;background:var(--paper);border-radius:8px}
+
+  .process{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+  .step{padding:28px;border:1px solid var(--line);border-radius:14px;background:var(--bg)}
+  .step b{font-family:Fraunces,serif;font-weight:400;font-size:2.6rem;color:var(--accent);line-height:1}
+  .step h4{margin:18px 0 8px;font-size:1.1rem;font-weight:600}
   .step p{color:var(--muted);font-size:.93rem}
 
-  /* PRICING */
-  .plans{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:stretch}
-  .plan{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:32px;display:flex;flex-direction:column}
-  .plan.pop{background:var(--accent);color:var(--accent-ink);border-color:var(--accent);transform:scale(1.03)}
-  .plan.pop .muted,.plan.pop li{color:#2b3300}
-  .badge{align-self:flex-start;font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;background:var(--accent-ink);color:var(--accent);padding:5px 10px;border-radius:999px;margin-bottom:14px}
-  .plan h3{font-size:1.1rem;font-weight:800}
-  .price{font-family:Anton,sans-serif;font-size:3.6rem;line-height:1;margin:16px 0 4px}
-  .price small{font-family:Inter,sans-serif;font-size:.95rem;font-weight:500}
-  .muted{color:var(--muted);font-size:.9rem}
-  .plan ul{list-style:none;margin:24px 0 30px;display:grid;gap:11px;font-size:.94rem;color:var(--muted)}
-  .plan li{display:flex;gap:10px}
-  .plan li::before{content:"✓";font-weight:800;color:var(--accent)}
-  .plan.pop li::before{color:var(--accent-ink)}
-  .plan .btn{margin-top:auto;justify-content:center}
-  .plan.pop .btn{background:var(--accent-ink);color:var(--accent)}
+  .contact{background:var(--ink);color:var(--bg);padding:120px 0 50px}
+  .contact .label{color:#a59d92}
+  .contact h2{font-size:clamp(3rem,10vw,8.5rem);line-height:.92;margin:22px 0 46px}
+  .contact h2 a{color:var(--accent);font-style:italic;border-bottom:3px solid transparent;transition:border-color .2s}
+  .contact h2 a:hover{border-color:var(--accent)}
+  .contact-row{display:flex;gap:14px;flex-wrap:wrap}
+  .contact-row a{padding:14px 22px;border:1px solid #3b3632;border-radius:999px;transition:background .2s,color .2s}
+  .contact-row a:hover{background:var(--bg);color:var(--ink)}
+  .foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-top:100px;padding-top:26px;border-top:1px solid #3b3632;color:#a59d92;font-size:.86rem}
 
-  /* TESTIMONIALS */
-  .quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-  .quote{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:28px}
-  .quote .stars{color:var(--accent);letter-spacing:3px;margin-bottom:14px}
-  .quote p{font-size:1.02rem;margin-bottom:22px}
-  .who{display:flex;gap:12px;align-items:center;font-size:.88rem}
-  .who i{width:42px;height:42px;border-radius:50%;display:block}
-  .who span{color:var(--muted);display:block}
-
-  /* CTA */
-  .cta{position:relative;border-radius:28px;padding:70px 50px;background:linear-gradient(120deg,#1a1f00,#0b0b0c 60%);border:1px solid #3a4700;overflow:hidden;text-align:center}
-  .cta::after{content:"FITMAX";position:absolute;bottom:-40px;left:50%;transform:translateX(-50%);font-family:Anton,sans-serif;font-size:14rem;color:rgba(198,255,0,.05);pointer-events:none;white-space:nowrap}
-  .cta h2{font-size:clamp(2.4rem,6vw,4.8rem);margin:14px 0 18px}
-  .cta p{color:var(--muted);max-width:520px;margin:0 auto 30px}
-  form.lead{display:flex;gap:10px;max-width:480px;margin:0 auto;position:relative;z-index:1}
-  form.lead input{flex:1;min-width:0;background:var(--bg);border:1.5px solid var(--line);border-radius:999px;padding:15px 22px;color:var(--text);font:inherit}
-  form.lead input:focus{outline:none;border-color:var(--accent)}
-  .ok{margin-top:14px;color:var(--accent);font-weight:600;display:none}
-
-  footer{border-top:1px solid var(--line);padding:40px 0;color:var(--muted);font-size:.88rem}
-  footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
-
-  .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease}
   .reveal.in{opacity:1;transform:none}
-  @media (prefers-reduced-motion:reduce){.track{animation:none}.reveal{opacity:1;transform:none}}
+  @media (prefers-reduced-motion:reduce){.ticker .t{animation:none}.reveal{opacity:1;transform:none}}
 
-  @media (max-width:960px){
-    .hero-grid{grid-template-columns:1fr}
-    .hero-visual{max-width:440px;width:100%;margin:0 auto}
-    .programs,.quotes,.plans{grid-template-columns:1fr}
-    .plan.pop{transform:none}
-    .steps,.stats{grid-template-columns:repeat(2,1fr)}
+  @media (max-width:900px){
     .links{display:none}
+    .hero-foot,.about{grid-template-columns:1fr}
+    .hero-foot .side{justify-content:flex-start}
+    .work,.work.wide,.work.narrow{grid-column:span 12}
+    .thumb{height:auto;aspect-ratio:4/3}
+    .process{grid-template-columns:1fr 1fr}
+    .portrait{max-width:420px}
   }
   @media (max-width:560px){
     .wrap{padding:0 16px}
-    section{padding:70px 0}
-    .stats,.steps{grid-template-columns:1fr}
-    .f1{left:10px}.f2{right:10px}
-    .cta{padding:50px 22px}
-    form.lead{flex-direction:column}
-    .hero h1 .stroke{-webkit-text-stroke:1.5px var(--text)}
+    section{padding:76px 0}
+    .hero{padding:60px 0 50px}
+    .process{grid-template-columns:1fr}
+    .svc summary{grid-template-columns:40px 1fr auto;gap:12px}
+    .svc .body{padding-left:52px}
+    .pill .txt{display:none}
   }
 </style>
 </head>
@@ -166,214 +146,134 @@
 
 <header>
   <nav class="wrap">
-    <a href="#" class="logo">FIT<span>MAX</span></a>
+    <a href="#" class="mark"><b>JT</b>Justo Triviño</a>
     <div class="links">
-      <a href="#programas">Programas</a>
-      <a href="#metodo">Método</a>
-      <a href="#planes">Planes</a>
-      <a href="#opiniones">Opiniones</a>
+      <a href="#trabajos">Trabajos</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#proceso">Proceso</a>
     </div>
-    <a href="#empezar" class="btn btn-primary">Prueba gratis</a>
+    <a href="#contacto" class="pill"><span class="dot"></span><span class="txt">Disponible para proyectos</span><span>→</span></a>
   </nav>
 </header>
 
 <main>
   <section class="hero">
-    <div class="wrap hero-grid">
-      <div>
-        <span class="eyebrow">Entrenamiento que da resultados</span>
-        <h1 class="display">Supera<br><span class="stroke">tu</span> <span class="hl">límite.</span></h1>
-        <p class="lead">Fuerza, funcional y nutrición guiados por coaches certificados. Un plan hecho para ti, seguimiento real y una comunidad que no te deja rendirte.</p>
-        <div class="cta-row">
-          <a href="#empezar" class="btn btn-primary">Empieza tu semana gratis →</a>
-          <a href="#programas" class="btn btn-ghost">Ver programas</a>
+    <div class="wrap">
+      <div class="label reveal">Diseñador visual · Identidad · Web</div>
+      <h1 class="serif reveal">Diseño marcas<br>que se <em>recuerdan.</em></h1>
+      <div class="hero-foot reveal">
+        <p>Soy Justo Triviño. Ayudo a emprendedores y empresas a construir una imagen clara, coherente y con carácter, desde el logo hasta la página web.</p>
+        <div class="side">
+          <div><b>+80</b><span>Proyectos</span></div>
+          <div><b>6</b><span>Años de oficio</span></div>
+          <div><b>4</b><span>Países</span></div>
         </div>
-        <div class="proof">
-          <div class="avatars">
-            <i style="background:linear-gradient(135deg,#ff9a5a,#ff4d2e)"></i>
-            <i style="background:linear-gradient(135deg,#7dd3fc,#3b82f6)"></i>
-            <i style="background:linear-gradient(135deg,#d9f99d,#65a30d)"></i>
-            <i style="background:linear-gradient(135deg,#f0abfc,#a21caf)"></i>
-          </div>
-          <div><b>+2.500 miembros</b> transformando su cuerpo · ★ 4,9</div>
-        </div>
-      </div>
-
-      <div class="hero-visual" aria-hidden="true">
-        <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice">
-          <defs>
-            <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0" stop-color="#c6ff00"/><stop offset="1" stop-color="#6b8a00"/>
-            </linearGradient>
-          </defs>
-          <g stroke="#26262a" stroke-width="1">
-            <path d="M0 100H400M0 200H400M0 300H400M0 400H400M100 0V500M200 0V500M300 0V500"/>
-          </g>
-          <circle cx="200" cy="250" r="150" fill="none" stroke="#2a2a2e" stroke-width="2"/>
-          <circle cx="200" cy="250" r="150" fill="none" stroke="url(#g)" stroke-width="10" stroke-linecap="round" stroke-dasharray="700 943" transform="rotate(-90 200 250)"/>
-          <!-- kettlebell -->
-          <g transform="translate(200 262)">
-            <path d="M-38 -72a38 38 0 0 1 76 0v22h-16v-22a22 22 0 0 0-44 0v22h-16z" fill="#f4f4f5"/>
-            <circle r="62" fill="#f4f4f5"/>
-            <rect x="-62" y="40" width="124" height="20" rx="6" fill="#f4f4f5"/>
-            <text y="16" text-anchor="middle" font-family="Anton,Impact" font-size="40" fill="#0b0b0c">MAX</text>
-          </g>
-        </svg>
-        <div class="float f1">Calorías hoy<strong>742 kcal</strong></div>
-        <div class="float f2">Objetivo semanal<strong>78%</strong><div class="bar"><i></i></div></div>
       </div>
     </div>
   </section>
 
-  <div class="marquee" aria-hidden="true">
-    <div class="track">
-      <span>Fuerza</span><span>Funcional</span><span>HIIT</span><span>Movilidad</span><span>Nutrición</span><span>Comunidad</span>
-      <span>Fuerza</span><span>Funcional</span><span>HIIT</span><span>Movilidad</span><span>Nutrición</span><span>Comunidad</span>
+  <div class="ticker" aria-hidden="true">
+    <div class="t">
+      <span>Identidad de marca</span><span>Diseño web</span><span>Redes sociales</span><span>Packaging</span><span>Dirección de arte</span>
+      <span>Identidad de marca</span><span>Diseño web</span><span>Redes sociales</span><span>Packaging</span><span>Dirección de arte</span>
     </div>
   </div>
 
-  <section>
+  <section id="trabajos">
     <div class="wrap">
-      <div class="stats reveal">
-        <div class="stat"><b>12<em>+</em></b><span>Años formando atletas</span></div>
-        <div class="stat"><b>2.5<em>K</em></b><span>Miembros activos</span></div>
-        <div class="stat"><b>40<em>+</em></b><span>Clases por semana</span></div>
-        <div class="stat"><b>96<em>%</em></b><span>Alcanza su objetivo</span></div>
+      <div class="sec-head reveal">
+        <div><div class="label">Trabajos seleccionados</div><h2 class="serif">Proyectos recientes</h2></div>
+        <a href="#contacto" class="pill">Ver todo →</a>
+      </div>
+      <div class="works">
+        <a href="#" class="work wide reveal"><div class="thumb"><div class="a1"><i>Ollin</i></div></div>
+          <div class="meta"><h3>Ollin Café</h3><span>Identidad de marca</span></div></a>
+        <a href="#" class="work narrow reveal"><div class="thumb"><div class="a2"><i></i></div></div>
+          <div class="meta"><h3>Sol Studio</h3><span>Logo · Papelería</span></div></a>
+        <a href="#" class="work narrow reveal"><div class="thumb"><div class="a3"><div class="ui"><b></b><div><i></i><i></i></div></div></div></div>
+          <div class="meta"><h3>Nexa App</h3><span>Diseño web · UI</span></div></a>
+        <a href="#" class="work wide reveal"><div class="thumb"><div class="a4"><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+          <div class="meta"><h3>Ruta Norte</h3><span>Contenido para redes</span></div></a>
       </div>
     </div>
   </section>
 
-  <section id="programas" style="padding-top:0">
+  <section id="servicios" class="services">
     <div class="wrap">
-      <div class="head reveal">
-        <div><span class="eyebrow">Programas</span><h2 class="display">Elige cómo<br>quieres crecer</h2></div>
-        <p>Tres caminos, un mismo objetivo: que te sientas más fuerte cada semana. Puedes combinarlos según tu ritmo.</p>
+      <div class="sec-head reveal">
+        <div><div class="label">Servicios</div><h2 class="serif">En qué te ayudo</h2></div>
       </div>
-      <div class="programs">
-        <article class="prog reveal">
-          <span class="num">01</span>
-          <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#c6ff00" stroke-width="2" stroke-linecap="round"><path d="M6 7v10M18 7v10M3 10v4M21 10v4M6 12h12"/></svg></div>
-          <h3>Fuerza</h3>
-          <p>Gana masa muscular y potencia con progresiones medibles y técnica supervisada.</p>
-          <div class="tags"><span>Hipertrofia</span><span>Powerlifting</span></div>
-        </article>
-        <article class="prog reveal">
-          <span class="num">02</span>
-          <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#c6ff00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></div>
-          <h3>HIIT & Funcional</h3>
-          <p>Sesiones intensas de 45 minutos para quemar grasa y mejorar tu resistencia.</p>
-          <div class="tags"><span>Cardio</span><span>Grupal</span></div>
-        </article>
-        <article class="prog reveal">
-          <span class="num">03</span>
-          <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#c6ff00" stroke-width="2" stroke-linecap="round"><path d="M12 21c-5-3-8-6.5-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 4.5-3 8-8 11z"/></svg></div>
-          <h3>Nutrición</h3>
-          <p>Plan alimenticio personalizado y revisiones quincenales con nuestro nutricionista.</p>
-          <div class="tags"><span>Plan a medida</span><span>Seguimiento</span></div>
-        </article>
+      <div class="svc reveal">
+        <details open>
+          <summary><span class="n">01</span><h3>Identidad de marca</h3><span class="plus">+</span></summary>
+          <div class="body">Logo, paleta de color, tipografías y manual de marca para que tu negocio se vea igual de profesional en todas partes.
+            <ul><li>Logotipo</li><li>Manual de marca</li><li>Papelería</li></ul></div>
+        </details>
+        <details>
+          <summary><span class="n">02</span><h3>Diseño web y landing pages</h3><span class="plus">+</span></summary>
+          <div class="body">Páginas rápidas, adaptadas a móvil y pensadas para convertir visitas en clientes.
+            <ul><li>Landing pages</li><li>Sitios web</li><li>UI / UX</li></ul></div>
+        </details>
+        <details>
+          <summary><span class="n">03</span><h3>Contenido para redes</h3><span class="plus">+</span></summary>
+          <div class="body">Plantillas, piezas y miniaturas con un estilo propio que hace que tu feed se reconozca al instante.
+            <ul><li>Instagram</li><li>Miniaturas de YouTube</li><li>Anuncios</li></ul></div>
+        </details>
+        <details>
+          <summary><span class="n">04</span><h3>Dirección de arte</h3><span class="plus">+</span></summary>
+          <div class="body">Acompaño campañas y lanzamientos para que cada pieza cuente la misma historia.
+            <ul><li>Campañas</li><li>Lanzamientos</li><li>Presentaciones</li></ul></div>
+        </details>
       </div>
     </div>
   </section>
 
-  <section id="metodo" class="method">
-    <div class="wrap">
-      <div class="head reveal">
-        <div><span class="eyebrow">El método FitMax</span><h2 class="display">Cuatro pasos.<br>Cero excusas.</h2></div>
-      </div>
-      <div class="steps">
-        <div class="step reveal"><h4>Evaluación inicial</h4><p>Medimos tu composición corporal, movilidad y nivel de fuerza.</p></div>
-        <div class="step reveal"><h4>Plan personalizado</h4><p>Tu coach diseña rutina y alimentación según tu objetivo.</p></div>
-        <div class="step reveal"><h4>Entrena con guía</h4><p>Clases y sesiones con corrección técnica en cada serie.</p></div>
-        <div class="step reveal"><h4>Mide y ajusta</h4><p>Revisamos tu progreso cada mes y subimos el nivel.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="planes">
-    <div class="wrap">
-      <div class="head reveal">
-        <div><span class="eyebrow">Planes</span><h2 class="display">Invierte en ti</h2></div>
-        <p>Sin matrícula ni permanencia. Cancela cuando quieras.</p>
-      </div>
-      <div class="plans">
-        <div class="plan reveal">
-          <h3>Básico</h3>
-          <div class="price">$29<small>/mes</small></div>
-          <span class="muted">Para empezar a moverte</span>
-          <ul><li>Acceso a sala de musculación</li><li>Horario 6:00 – 22:00</li><li>App con rutinas</li></ul>
-          <a href="#empezar" class="btn btn-ghost">Elegir Básico</a>
-        </div>
-        <div class="plan pop reveal">
-          <span class="badge">Más elegido</span>
-          <h3>Pro</h3>
-          <div class="price">$49<small>/mes</small></div>
-          <span class="muted">Resultados visibles en 8 semanas</span>
-          <ul><li>Todo lo del plan Básico</li><li>Clases grupales ilimitadas</li><li>Evaluación mensual</li><li>Plan nutricional</li></ul>
-          <a href="#empezar" class="btn">Elegir Pro</a>
-        </div>
-        <div class="plan reveal">
-          <h3>Elite</h3>
-          <div class="price">$89<small>/mes</small></div>
-          <span class="muted">Coaching 1 a 1</span>
-          <ul><li>Todo lo del plan Pro</li><li>8 sesiones personales al mes</li><li>Chat directo con tu coach</li><li>Acceso 24/7</li></ul>
-          <a href="#empezar" class="btn btn-ghost">Elegir Elite</a>
-        </div>
+  <section id="sobre-mi">
+    <div class="wrap about">
+      <div class="portrait reveal"><span>Tu foto aquí</span></div>
+      <div class="reveal">
+        <div class="label">Sobre mí</div>
+        <h2 class="serif">Buen diseño no es decoración: <em>es estrategia</em> que se ve.</h2>
+        <p>Trabajo de cerca con cada cliente para entender su negocio antes de dibujar una sola línea. Así, cada decisión visual tiene un porqué.</p>
+        <p>Me gustan los proyectos con personalidad, las marcas que quieren dejar huella y los clientes que se involucran en el proceso.</p>
+        <div class="tools"><span>Figma</span><span>Illustrator</span><span>Photoshop</span><span>After Effects</span><span>Webflow</span></div>
       </div>
     </div>
   </section>
 
-  <section id="opiniones" style="padding-top:0">
+  <section id="proceso" style="padding-top:0">
     <div class="wrap">
-      <div class="head reveal">
-        <div><span class="eyebrow">Opiniones</span><h2 class="display">Lo dicen<br>nuestros miembros</h2></div>
+      <div class="sec-head reveal">
+        <div><div class="label">Proceso</div><h2 class="serif">Cómo trabajamos</h2></div>
       </div>
-      <div class="quotes">
-        <figure class="quote reveal">
-          <div class="stars">★★★★★</div>
-          <p>“Bajé 9 kilos en tres meses y por primera vez disfruto entrenar. El seguimiento marca la diferencia.”</p>
-          <figcaption class="who"><i style="background:linear-gradient(135deg,#ff9a5a,#ff4d2e)"></i><div><b>Camila R.</b><span>Plan Pro · 6 meses</span></div></figcaption>
-        </figure>
-        <figure class="quote reveal">
-          <div class="stars">★★★★★</div>
-          <p>“Los coaches corrigen cada movimiento. Subí mi sentadilla de 80 a 130 kg sin una sola lesión.”</p>
-          <figcaption class="who"><i style="background:linear-gradient(135deg,#7dd3fc,#3b82f6)"></i><div><b>Andrés M.</b><span>Plan Elite · 1 año</span></div></figcaption>
-        </figure>
-        <figure class="quote reveal">
-          <div class="stars">★★★★★</div>
-          <p>“Las clases de HIIT son adictivas y la comunidad te empuja a volver. Mi energía cambió por completo.”</p>
-          <figcaption class="who"><i style="background:linear-gradient(135deg,#d9f99d,#65a30d)"></i><div><b>Valeria S.</b><span>Plan Pro · 4 meses</span></div></figcaption>
-        </figure>
+      <div class="process">
+        <div class="step reveal"><b>01</b><h4>Conversamos</h4><p>Una llamada para conocer tu negocio, tu público y tus objetivos.</p></div>
+        <div class="step reveal"><b>02</b><h4>Propuesta</h4><p>Presento la dirección visual, los entregables y los tiempos.</p></div>
+        <div class="step reveal"><b>03</b><h4>Diseño</h4><p>Desarrollo el proyecto con revisiones contigo en cada etapa.</p></div>
+        <div class="step reveal"><b>04</b><h4>Entrega</h4><p>Recibes todos los archivos listos para usar y una guía de uso.</p></div>
       </div>
     </div>
   </section>
 
-  <section id="empezar" style="padding-top:0">
+  <section id="contacto" class="contact">
     <div class="wrap">
-      <div class="cta reveal">
-        <span class="eyebrow">Tu primera semana es gratis</span>
-        <h2 class="display">Hoy empieza<br>tu mejor versión</h2>
-        <p>Déjanos tu correo y un coach te contactará en menos de 24 horas para agendar tu evaluación.</p>
-        <form class="lead" onsubmit="event.preventDefault();this.nextElementSibling.style.display='block';this.reset();">
-          <input type="email" required placeholder="tu@correo.com" aria-label="Correo electrónico">
-          <button class="btn btn-primary" type="submit">Quiero empezar</button>
-        </form>
-        <div class="ok">¡Listo! Te escribiremos muy pronto 💪</div>
+      <div class="label">Contacto</div>
+      <h2 class="serif">¿Tienes un proyecto?<br><a href="#">Hablemos.</a></h2>
+      <div class="contact-row">
+        <a href="#">Escríbeme por WhatsApp</a>
+        <a href="#">Instagram</a>
+        <a href="#">Behance</a>
+        <a href="#">LinkedIn</a>
       </div>
+      <div class="foot"><span>© 2026 Justo Triviño</span><span>Hecho con cuidado ✺</span></div>
     </div>
   </section>
 </main>
 
-<footer>
-  <div class="wrap">
-    <a href="#" class="logo">FIT<span style="color:var(--accent)">MAX</span></a>
-    <span>© 2026 FitMax. Todos los derechos reservados.</span>
-    <span>Instagram · TikTok · WhatsApp</span>
-  </div>
-</footer>
-
 <script>
-  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), {threshold:.12});
-  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.1});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 </script>
 </body>
 </html>
